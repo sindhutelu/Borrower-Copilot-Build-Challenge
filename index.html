@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Borrower Copilot</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+
+  <header class="masthead">
+    <div class="brand">Borrower <span>Copilot</span></div>
+    <div class="tag">No login · No bureau pull · Runs on your device</div>
+  </header>
+
+  <section id="intro" class="intro">
+    <h1>Know what's fair before you walk in.</h1>
+    <p>Answer questions about your income and expenses. Get a verdict, two amounts, a fair rate band, and an EMI ceiling — each one traceable to a plain-English reason. Nothing you type here is sent anywhere or saved.</p>
+    <ul class="promise">
+      <li>01 — Should you borrow at all?</li>
+      <li>02 — What can a lender sanction, vs. what can you safely carry?</li>
+      <li>03 — What rate is fair for your profile, all-in?</li>
+      <li>04 — What EMI should you agree to, and what if things go wrong?</li>
+    </ul>
+    <button class="btn" id="btnStart">Start — takes 3 to 5 minutes</button>
+    <p style="margin-top:2rem; font-size:.85rem; color:var(--ink-soft)">Or load a sample profile to look:</p>
+    <div class="persona-pick">
+      <button data-persona="priya"><b>Priya, 29 — Bengaluru</b><span>Salaried engineer, ₹8L personal loan for a wedding</span></button>
+      <button data-persona="ravi"><b>Ravi, 42 — Mysuru</b><span>Kirana shop owner, ₹15L for stock and a delivery vehicle</span></button>
+      <button data-persona="anita"><b>Anita, 35 — Hubballi</b><span>Delivery rider, ₹1.5L for an electric scooter</span></button>
+    </div>
+  </section>
+
+  <section id="wizard" class="hidden">
+    <div class="pageno" id="pageno"></div>
+    <div id="qcard"></div>
+    <div class="wizard-nav">
+      <button class="btn secondary" id="btnBack">Back</button>
+      <div class="right">
+        <button class="btn ghost hidden" id="btnSkip">Skip this one</button>
+        <button class="btn" id="btnNext">Next</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="results" class="hidden"></section>
+
+</div>
+
+<script src="rules.js"></script>
+<script src="engine.js"></script>
+<script src="questions.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
